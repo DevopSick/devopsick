@@ -3,14 +3,17 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "browserslist": "bunx update-browserslist-db@latest",
     "dev": "bunx --bun astro dev --verbose",
-    "build": "astro build",
-    "preview": "astro preview",
+    "build": "bunx --bun astro build ./dist",
+    "preview": "bunx --bun astro preview",
     "astro": "astro"
   },
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24.3.0"
   },
   "peerDependencies": {
     "typescript": "^5.9.2"
@@ -20,11 +23,14 @@
     "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
+    "@tailwindcss/vite": "^4.1.12",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "astro": "^5.13.5",
+    "caniuse-lite": "^1.0.30001739",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.12"
   }
 }
